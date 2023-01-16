@@ -16,6 +16,6 @@ package main
 
 func main() {
 	// example1()
-	// outOfCluster()
-	inCluster()
+	outOfCluster()
+	// inCluster()
 }
