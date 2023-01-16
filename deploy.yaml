@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clintgo-deployment
+  labels:
+    app: clientgo
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: clientgo
+  template:
+    metadata:
+      labels:
+        app: clientgo
+    spec:
+      containers:
+        - name: clientgo
+          image: tapojit047/clientgo
+          ports:
+            - containerPort: 80
